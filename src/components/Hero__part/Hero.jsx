@@ -24,7 +24,7 @@ const Hero = () => {
                     <div className="mt-[200px]">
                         <motion.h2
                         initial={{opacity:0, y: -100}}
-                        animate={{opacity:1, y: 0}}
+                        whileInView={{opacity:1, y: 0}}
                         transition={{
                             type: "spring",
                             stiffness: 100,
@@ -34,7 +34,7 @@ const Hero = () => {
                          className="lato_thin text-lightOrange text-[60px] font-bold w-[200px] leading-tight pl-24">Blvck Tumbler</motion.h2>
                         <motion.div
                          initial={{opacity:0, x: -100}}
-                         animate={{opacity:1, x: 0}}
+                         whileInView={{opacity:1, x: 0}}
                          transition={{
                              type: "spring",
                              stiffness: 100,
@@ -51,7 +51,7 @@ const Hero = () => {
                     <div className="relative">
                         <motion.img
                         initial={{opacity:0, scale: 0}}
-                        animate={{opacity:1, scale: 1}}
+                        whileInView={{opacity:1, scale: 1}}
                         transition={{
                             type: "spring",
                             stiffness: 100,
@@ -64,7 +64,7 @@ const Hero = () => {
                     <div className="">
                     <motion.div
                     initial={{opacity:0, x: 100}}
-                    animate={{opacity:1, x: 0}}
+                    whileInView={{opacity:1, x: 0}}
                     transition={{
                         type: "spring",
                         stiffness: 100,
