@@ -18,38 +18,38 @@ const AppBanner = () => {
     <>
     <div className='pb-14'>
         <div className="container">
-            <div style={bgStyle} className='w-full h-[400px] rounded-xl flex justify-end items-center'>
-                <div className=' pr-[200px] text-center'>
+            <div style={bgStyle} className='w-full xl:h-[400px] mb:h-[200px] rounded-xl flex justify-end items-center'>
+                <div className=' xl:pr-[200px] text-center'>
                     <motion.h1 
                      initial={{opacity: 0, y: 100}}
                      whileInView={{opacity: 1, y: 0}}
                      transition={{                       
                          delay: 0.2,
                      }}
-                    className='lato_thin text-3xl font-bold'>Download the app</motion.h1>
+                    className='lato_thin xl:text-3xl mb:text-2xl font-bold'>Download the app</motion.h1>
                     <motion.p 
                      initial={{opacity: 0, y: 100}}
                      whileInView={{opacity: 1, y: 0}}
                      transition={{                       
                          delay: 0.4,
                      }}
-                    className='w-[400px] mt-5'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantiumearum
+                    className='xl:w-[400px] mb:w-[280px] mt-5 mb:m-auto lato_thin mb:mt-4'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantiumearum
                           repudiandae at harum.</motion.p>
-                          <div className='flex justify-center gap-4 mt-5'>
+                          <div className='flex justify-center xl:gap-4 mb:gap-2 mt-5'>
                             <motion.img 
                              initial={{opacity: 0, y: 100}}
                              whileInView={{opacity: 1, y: 0}}
                              transition={{                       
                                  delay: 0.6,
                              }}
-                            className='w-[170px] ' src={PlayStore} alt="" />
+                            className='xl:w-[170px] mb:w-[120px] ' src={PlayStore} alt="" />
                             <motion.img
                              initial={{opacity: 0, y: 100}}
                              whileInView={{opacity: 1, y: 0}}
                              transition={{                       
                                  delay: 0.8,
                              }} 
-                            className='w-[170px] ' src={AppStore} alt="" />
+                            className='xl:w-[170px] mb:w-[120px] ' src={AppStore} alt="" />
                           </div>
                 </div>
             </div>

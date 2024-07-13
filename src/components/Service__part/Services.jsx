@@ -52,16 +52,16 @@ const Services = () => {
                     damping: 10,
                     delay: 0.2
                 }} 
-                className='w-[500px] m-auto lato_thin text-[15px] font-medium mt-2 text-[#444]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit vitae asperiores eum eos
+                className='xl:w-[500px] mb:w-[280px] m-auto lato_thin xl:text-[15px] mb:text-[14px] xl:font-medium mb:font-bold mt-2 text-[#444]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit vitae asperiores eum eos
                      qui minus aperiam totam reiciendis. Totam, ipsam!</motion.p>
             </div>
             <motion.div variants={containerVariant}
             initial="hidden" 
             whileInView={"visible"}
             viewport={{amount: 0.8}}
-            className='grid grid-cols-3 gap-44 mt-9'>
+            className='grid xl:grid-cols-3 mb:grid-cols-1 xl:gap-44 mb:gap-16 xl:mt-9'>
                 {HeroData?.map((item)=>(
-                    <motion.div 
+                    <motion.div key={item.id} 
                     variants={cardVariant}
                     className=''>
                         <img className="w-full h-[300px] object-cover rounded-xl hover:scale-110 duration-300 cursor-pointer" src={SerImg1} alt="" />

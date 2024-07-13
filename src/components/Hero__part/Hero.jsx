@@ -1,7 +1,12 @@
+import { useState } from "react"
 import BgImage from "../../assets/images/bg-slate.png"
 import CoffeeMain from "../../assets/images/black.png"
 import Navbar from "./Navbar"
 import { motion, spring } from "framer-motion"
+import { RiFacebookFill } from "react-icons/ri";
+import { IoLogoTwitter } from "react-icons/io";
+import { CiInstagram } from "react-icons/ci";
+
 
 const bgImage = {
     backgroundImage: `url(${BgImage})`,
@@ -11,17 +16,21 @@ const bgImage = {
 }
 
 const Hero = () => {
+
+    const [ sidebar, setSidebar] = useState(false)
+
+
   return (
     <main style={bgImage}>
-        <section className="w-full h-[850px]">
+        <section className="w-full xl:h-[850px] mb:h-[900px] relative">
             <div className="container">
                 {/* NavBar part Section */}
                 <div>
-                    <Navbar/>
+                    <Navbar sidebar={sidebar} setSidebar={setSidebar} />
                 </div>
                 {/* Hero part Section */}
-                <div className="grid grid-cols-3 gap-5 w-full h-[750px]">
-                    <div className="mt-[200px]">
+                <div className="grid xl:grid-cols-3 mb:grid-cols-1 gap-5 w-full h-[750px] relative z-0">
+                    <div className="xl:mt-[200px] mb:mt-[50px]">
                         <motion.h2
                         initial={{opacity:0, y: -100}}
                         whileInView={{opacity:1, y: 0}}
@@ -31,7 +40,7 @@ const Hero = () => {
                             damping: 10,
                             delay: 0.2
                         }}
-                         className="lato_thin text-lightOrange text-[60px] font-bold w-[200px] leading-tight pl-24">Blvck Tumbler</motion.h2>
+                         className="lato_thin text-lightOrange text-[60px] font-bold w-[200px] leading-tight xl:pl-24 mb:pl-9">Blvck Tumbler</motion.h2>
                         <motion.div
                          initial={{opacity:0, x: -100}}
                          whileInView={{opacity:1, x: 0}}
@@ -41,9 +50,9 @@ const Hero = () => {
                              damping: 10,
                              delay: 0.2
                          }}
-                         className="relative z-10 pl-8 mt-24">
+                         className="relative z-10 xl:pl-8 mb:pl-3 xl:mt-24 mb:mt-14">
                             <h4 className="lato_thin text-lightOrange text-xl font-semibold pt-5 pb-3 relative z-10">Black LifeStyle Lover's,</h4>
-                            <p className="lato_thin text-gray-500 text-[14px] font-normal leading-7 relative z-10">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo saepe iusto asperiores tempore,
+                            <p className="lato_thin text-gray-500 xl:text-[14px] mb:text-[12px] font-normal xl:leading-7 mb:leading-5 relative z-10">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo saepe iusto asperiores tempore,
                                  similique, dolore eveniet fuga molestiae ratione obcaecati expedita architecto!</p>
                                  <div className="w-[220px] h-[140px] bg-lightGray absolute top-0 left-0 z-0"></div>
                         </motion.div>
@@ -58,10 +67,10 @@ const Hero = () => {
                             damping: 10,
                             delay: 0.4,
                         }}
-                        className="relative left-[10%] z-10" src={CoffeeMain} alt="" />
+                        className="relative left-[10%] z-10 mb:max-w-[60%]" src={CoffeeMain} alt="" />
                         <h2 className="lato_thin text-black text-[120px] font-black w-[200px] leading-tight pl-24 absolute top-[-100px] left-[200px] opacity-10">Blvck Tumbler</h2>
                     </div>
-                    <div className="">
+                    <div className="xl:block mb:hidden">
                     <motion.div
                     initial={{opacity:0, x: 100}}
                     whileInView={{opacity:1, x: 0}}
@@ -82,7 +91,27 @@ const Hero = () => {
                     </motion.div>
                     </div>
                 </div>
-            </div>
+            </div>  
+            {/* sidebar part */}
+            {
+                sidebar && (
+                    <div>
+                        <motion.div 
+                          initial={{x: 100}} 
+                          animate={{x: 0}} 
+                        className='absolute top-0 right-0 xl:w-[140px] mb:w-[80px] h-full bg-yellow-700 z-0 flex justify-center items-center'>
+                            <div className="flex flex-col gap-6 justify-center items-center">
+                                <div className="w-[1px] h-[50px] bg-white"></div>
+                                <div className="border-2 border-white rounded-full p-2 cursor-pointer"><RiFacebookFill /></div>
+                                <div className="border-2 border-white rounded-full p-2 cursor-pointer"><IoLogoTwitter /></div>
+                                <div className="border-2 border-white rounded-full p-2 cursor-pointer"><CiInstagram /></div>     
+                                <div className="w-[1px] h-[50px] bg-white"></div>
+                            </div>
+                        </motion.div>
+                    </div>
+                )
+            }
+           
         </section>      
     </main>
   )

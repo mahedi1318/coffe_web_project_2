@@ -7,7 +7,7 @@ const WheretoBuy = () => {
     <>
       <div className='my-32'>
         <div className='container'>
-            <div className='grid grid-cols-3 gap-28 items-center'>
+            <div className='grid xl:grid-cols-3 mb:grid-cols-1 gap-28 items-center'>
                 <div>
                     <motion.h1 
                     initial={{opacity: 0, y: 100}}
@@ -23,7 +23,7 @@ const WheretoBuy = () => {
                         delay: 0.4,
                     }}
                     className='flex gap-6 mt-6'>
-                        <input type="text" placeholder='Name' className='w-[160px] h-[45px] pl-5 border-2 border-[#cecccc] rounded-lg'/>
+                        <input type="text" placeholder='Name' className='xl:w-[160px] mb:w-full h-[45px] pl-5 border-2 border-[#cecccc] rounded-lg'/>
                         <input type="email" placeholder='Email' className='w-full h-[45px] pl-5 border-2 border-[#cecccc] rounded-lg'/>
                     </motion.div>
                     <motion.div 
@@ -34,7 +34,7 @@ const WheretoBuy = () => {
                     }}
                     className='flex gap-6 mt-6'>
                         <input type="country" placeholder='Country' className='w-full h-[45px] pl-5 border-2 border-[#cecccc] rounded-lg'/>
-                        <input type="text" placeholder='ZipCode' className='w-[160px] h-[45px] pl-5 border-2 border-[#cecccc] rounded-lg'/>
+                        <input type="text" placeholder='ZipCode' className='xl:w-[160px] mb:w-full h-[45px] pl-5 border-2 border-[#cecccc] rounded-lg'/>
                     </motion.div>
                     <motion.button
                     initial={{opacity: 0, y: 100}}
@@ -44,7 +44,7 @@ const WheretoBuy = () => {
                     }} 
                     className='py-3 w-full block bg-yellow-500 text-center mt-6 rounded-lg lato_thin font-medium text-xl text-[#3d3d3d]'>Order Now</motion.button>
                 </div>
-                <div className='col-span-2'>
+                <div className='xl:col-span-2 mb:col-span-1'>
                     <motion.img 
                       initial={{opacity:0, scale: 0}}
                       whileInView={{opacity:1, scale: 1}}

@@ -1,8 +1,13 @@
-import React from 'react'
 import { FaBars } from "react-icons/fa6";
 import { motion } from 'framer-motion';
+;
 
-const Navbar = () => {
+const Navbar = ({sidebar, setSidebar}) => {  
+
+      const handleSidebar = ()=>{
+        setSidebar(!sidebar)
+      }
+
   return (
     <>
      <motion.div
@@ -18,10 +23,10 @@ const Navbar = () => {
         <div>
             <h1 className='lato_thin text-2xl font-bold text-white'><span className='text-yellow-700'>CODERS</span> CAFE.</h1>
         </div>
-        <div className='text-white text-3xl '>
-            <FaBars />
+        <div className='text-white text-3xl cursor-pointer relative z-10'>
+            <FaBars onClick={handleSidebar} />
         </div>
-     </motion.div>
+     </motion.div>     
     </>
   )
 }
