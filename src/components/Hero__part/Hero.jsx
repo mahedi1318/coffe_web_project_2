@@ -22,15 +22,15 @@ const Hero = () => {
 
   return (
     <main style={bgImage}>
-        <section className="w-full xl:h-[850px] mb:h-[900px] relative">
+        <section className="w-full xl:h-[850px] mb:h-[900px] md:h-[800px] relative">
             <div className="container">
                 {/* NavBar part Section */}
                 <div>
                     <Navbar sidebar={sidebar} setSidebar={setSidebar} />
                 </div>
                 {/* Hero part Section */}
-                <div className="grid xl:grid-cols-3 mb:grid-cols-1 gap-5 w-full h-[750px] relative z-0">
-                    <div className="xl:mt-[200px] mb:mt-[50px]">
+                <div className="grid xl:grid-cols-3 mb:grid-cols-1 md:grid-cols-2 gap-5 w-full h-[750px] relative z-0">
+                    <div className="xl:mt-[200px] mb:mt-[50px] md:mt-[200px]">
                         <motion.h2
                         initial={{opacity:0, y: -100}}
                         whileInView={{opacity:1, y: 0}}
@@ -67,10 +67,10 @@ const Hero = () => {
                             damping: 10,
                             delay: 0.4,
                         }}
-                        className="relative left-[10%] z-10 mb:max-w-[60%]" src={CoffeeMain} alt="" />
-                        <h2 className="lato_thin text-black text-[120px] font-black w-[200px] leading-tight pl-24 absolute top-[-100px] left-[200px] opacity-10">Blvck Tumbler</h2>
+                        className="relative left-[10%] z-10 mb:max-w-[60%] md:max-w-[80%]" src={CoffeeMain} alt="" />
+                        <h2 className="lato_thin text-black text-[120px] font-black w-[200px] leading-tight pl-24 absolute top-[-100px] xl:left-[200px] md:left-[-150px] opacity-10">Blvck Tumbler</h2>
                     </div>
-                    <div className="xl:block mb:hidden">
+                    <div className="xl:block mb:hidden md:hidden">
                     <motion.div
                     initial={{opacity:0, x: 100}}
                     whileInView={{opacity:1, x: 0}}

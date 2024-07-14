@@ -52,14 +52,14 @@ const Services = () => {
                     damping: 10,
                     delay: 0.2
                 }} 
-                className='xl:w-[500px] mb:w-[280px] m-auto lato_thin xl:text-[15px] mb:text-[14px] xl:font-medium mb:font-bold mt-2 text-[#444]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit vitae asperiores eum eos
+                className='xl:w-[500px] mb:w-[280px] md:w-[500px] m-auto lato_thin xl:text-[15px] mb:text-[14px] xl:font-medium mb:font-bold mt-2 text-[#444]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit vitae asperiores eum eos
                      qui minus aperiam totam reiciendis. Totam, ipsam!</motion.p>
             </div>
             <motion.div variants={containerVariant}
             initial="hidden" 
             whileInView={"visible"}
             viewport={{amount: 0.8}}
-            className='grid xl:grid-cols-3 mb:grid-cols-1 xl:gap-44 mb:gap-16 xl:mt-9'>
+            className='grid xl:grid-cols-3 mb:grid-cols-1 md:grid-cols-2 xl:gap-44 mb:gap-16 xl:mt-9 md:mt-11'>
                 {HeroData?.map((item)=>(
                     <motion.div key={item.id} 
                     variants={cardVariant}

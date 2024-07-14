@@ -12,7 +12,7 @@ const Footer = () => {
     <>
       <div className='bg-gradient-to-r from-primary to-primaryDark pt-12 pb-8 text-white'>
         <div className="container">
-            <div className='grid xl:grid-cols-3 mb:grid-cols-1 xl:gap-8 mb:gap-12'>
+            <div className='grid xl:grid-cols-3 mb:grid-cols-1 md:grid-cols-2 xl:gap-8 mb:gap-12'>
                 <div>
                     <h1 className='text-3xl font-bold uppercase lato_thin'>Coders Cafe</h1>
                     <p className='text-[15px] font-normal lato_thin mt-4 leading-6 xl:w-[400px] mb:w-[300px]'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque nesciunt reprehenderit qui natus
